@@ -12,22 +12,13 @@ Download and install `cfssl` and `cfssljson` from the [cfssl repository](https:/
 ### OS X
 
 ```
-curl -o cfssl https://pkg.cfssl.org/R1.2/cfssl_darwin-amd64
-curl -o cfssljson https://pkg.cfssl.org/R1.2/cfssljson_darwin-amd64
-```
-
-```
-chmod +x cfssl cfssljson
-```
-
-```
-sudo mv cfssl cfssljson /usr/local/bin/
-```
-
-Some OS X users may experience problems using the pre-built binaries in which case [Homebrew](https://brew.sh) might be a better option:
-
-```
 brew install cfssl
+```
+
+```
+go get -u github.com/cloudflare/cfssl/cmd/cfssljson
+chmod +x cfssl cfssljson
+export PATH=$HOME/go/bin:$PATH
 ```
 
 ### Linux
@@ -73,6 +64,12 @@ Runtime: go1.6
 The `kubectl` command line utility is used to interact with the Kubernetes API Server. Download and install `kubectl` from the official release binaries:
 
 ### OS X
+
+```
+brew install kubectl
+```
+
+OR 
 
 ```
 curl -o kubectl https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/darwin/amd64/kubectl
