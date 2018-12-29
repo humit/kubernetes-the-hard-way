@@ -20,7 +20,7 @@ Create the `kubernetes-the-hard-way` custom VPC network:
 gcloud compute networks create kubernetes-the-hard-way --subnet-mode custom
 ```
 
-Check the networks:
+List the networks:
 
 ```
 gcloud compute networks list
@@ -44,6 +44,35 @@ gcloud compute networks subnets create kubernetes \
 ```
 
 > The `10.240.0.0/24` IP address range can host up to 254 compute instances.
+
+List the subnets:
+
+```
+gcloud compute networks subnets list
+```
+> Output
+```
+NAME        REGION                   NETWORK                  RANGE
+default     us-west2                 default                  10.168.0.0/20
+default     asia-northeast1          default                  10.146.0.0/20
+default     us-west1                 default                  10.138.0.0/20
+default     southamerica-east1       default                  10.158.0.0/20
+default     europe-west4             default                  10.164.0.0/20
+default     asia-east1               default                  10.140.0.0/20
+default     europe-north1            default                  10.166.0.0/20
+default     asia-southeast1          default                  10.148.0.0/20
+default     us-east4                 default                  10.150.0.0/20
+default     europe-west1             default                  10.132.0.0/20
+kubernetes  europe-west1             kubernetes-the-hard-way  10.240.0.0/24
+default     europe-west2             default                  10.154.0.0/20
+default     europe-west3             default                  10.156.0.0/20
+default     australia-southeast1     default                  10.152.0.0/20
+default     asia-south1              default                  10.160.0.0/20
+default     us-east1                 default                  10.142.0.0/20
+default     us-central1              default                  10.128.0.0/20
+default     asia-east2               default                  10.170.0.0/20
+default     northamerica-northeast1  default                  10.162.0.0/20
+```
 
 ### Firewall Rules
 
