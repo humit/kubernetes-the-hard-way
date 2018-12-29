@@ -1,3 +1,7 @@
+# The Changes In This Fork
+
+This fork of kubernetes-the-hard-way tutorial aims to introduce changes that would be suitable in terms of system administration. The most basic difference will be using the package managers instead of pre-built binaries and manual installation. This would bring the ubernetes installation closer to a production environment.
+
 # Prerequisites
 
 ## Google Cloud Platform
