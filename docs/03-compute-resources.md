@@ -85,20 +85,6 @@ gcloud compute firewall-rules create kubernetes-the-hard-way-allow-internal \
   --source-ranges 10.240.0.0/24,10.200.0.0/16
 ```
 
-List firewall rules:
-```
- gcloud compute firewall-rules list
- ```
- > Output
- ```
-NAME                                    NETWORK                  DIRECTION  PRIORITY  ALLOW                         DENY  DISABLED
-default-allow-icmp                      default                  INGRESS    65534     icmp                                False
-default-allow-internal                  default                  INGRESS    65534     tcp:0-65535,udp:0-65535,icmp        False
-default-allow-rdp                       default                  INGRESS    65534     tcp:3389                            False
-default-allow-ssh                       default                  INGRESS    65534     tcp:22                              False
-kubernetes-the-hard-way-allow-external  kubernetes-the-hard-way  INGRESS    1000      tcp:22,tcp:6443,icmp                False
-kubernetes-the-hard-way-allow-internal  kubernetes-the-hard-way  INGRESS    1000      tcp,udp,icmp                        False
-```
 Create a firewall rule that allows external SSH, ICMP, and HTTPS:
 
 ```
