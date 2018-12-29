@@ -22,6 +22,8 @@ gcloud version
 
 ### Set a Default Compute Region and Zone
 
+> Use the `gcloud compute zones list` command to view additional regions and zones.
+
 This tutorial assumes a default compute region and zone have been configured.
 
 If you are using the `gcloud` command-line tool for the first time `init` is the easiest way to do this:
@@ -30,19 +32,29 @@ If you are using the `gcloud` command-line tool for the first time `init` is the
 gcloud init
 ```
 
+Check the default compute region:
+
+```
+gcloud config get-value compute/region
+```
+
 Otherwise set a default compute region:
 
 ```
-gcloud config set compute/region us-west1
+gcloud config set compute/region europe-west1
+```
+
+Check the default compute zone:
+
+```
+gcloud config get-value compute/zone
 ```
 
 Set a default compute zone:
 
 ```
-gcloud config set compute/zone us-west1-c
+gcloud config set compute/zone europe-west1-b
 ```
-
-> Use the `gcloud compute zones list` command to view additional regions and zones.
 
 ## Running Commands in Parallel with tmux
 
