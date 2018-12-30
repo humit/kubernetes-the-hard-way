@@ -1,7 +1,3 @@
-# The Changes In This Fork
-
-This fork of kubernetes-the-hard-way tutorial aims to introduce changes that would be suitable in terms of system administration. The most basic difference will be using the package managers instead of pre-built binaries and manual installations. This would bring the ubernetes installation closer to a production environment.
-
 # Kubernetes The Hard Way
 
 This tutorial walks you through setting up Kubernetes the hard way. This guide is not for people looking for a fully automated command to bring up a Kubernetes cluster. If that's you then check out [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine), or the [Getting Started Guides](http://kubernetes.io/docs/getting-started-guides/).
